@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Example</title>
+  </head>
+  <body>
+    <h1>Responsive Image with picture tag</h1>
+
+    <picture>
+      <!-- Image for small screens (e.g., mobile) -->
+      <source srcset="../assets/images/red.jpg" media="(max-width:200px)" />
+
+      <!-- Image for medium screens (e.g., tablets) -->
+      <source
+        srcset="../assets/images/html.jpg"
+        media="(min-width: 200px) and (max-width: 400px)"
+      />
+
+      <!-- Image for large screens (e.g., desktops) -->
+      <source srcset="image-large.jpg" media="(min-width:1200px)" />
+
+      <!-- Fallback image if no conditions match -->
+      <img src="../assets/images/hi nanna.jpg" alt="A description of the image" />
+    </picture>
+
+    <p>
+      This is a simple example of using the <code>&lt;picture&gt;</code> tag to
+      load different images based on screen size.
+    </p>
+  </body>
+</html>
